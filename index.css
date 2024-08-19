@@ -46,7 +46,7 @@ section h2 {
     font-weight: 400;
     text-align: center;
     position: relative;
-    margin-bottom: 3em;
+    margin-bottom: 0.3em;
 }
 
 section h2::before {
@@ -73,12 +73,15 @@ section h2::after {
 
 .slider {
     display: flex;
+    width: 1400px;
+    height: 300px;
+    margin: auto;
 }
 
 .slider .card {
     background-color: #000000af;
-    border-radius: 5px;
-    margin: 0.5rem;
+    border-radius: 2px;
+    margin: 0.2rem;
     width: 100%;
     max-width: 300px;
     display: flex;
@@ -88,4 +91,14 @@ section h2::after {
 
 .slider .card .thumb {
     width: 100%;
+}
+
+.slider .card .title {
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 0.3rem;
+}
+
+.anuncio-lancamentos {
+    
 }
