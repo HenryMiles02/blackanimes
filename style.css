@@ -2,18 +2,53 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao);
+    list-style: none;
+    text-decoration: none;
+}
+
 :root {
-    --cor0:#D9D9D9;
-    --cor1:#00A0D1; 
-    --cor2:#005ED1;
-    --cor3:#0B0037;
-    --cor4:#15131F;
-    --cor5:#000000; 
+    --branco:#D9D9D9;
+    --azul-claro:#00A0D1; 
+    --azul:#005ED1;
+    --azul-escuro:#0B0037;
+    --dark:#15131F;
+    --preto:#000000; 
 
     --fonte-padrao: "Teko", sans-serif;
 }
 
 body {
-    background-color: var(--cor4);
+    /*background-color: var(--dark);*/
+    color: var(--branco); 
+}
+
+.navigation {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #000000be;
+    width: 100%;
+    background: #15131f42;
+}
+
+.navigation .logo {
+    color: var(--azul-claro);
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--azul-escuro);
+}
+
+a {
+    text-decoration: none;
 }
