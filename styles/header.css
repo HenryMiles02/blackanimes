@@ -1,0 +1,95 @@
+header {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+}
+
+.navigation {
+    width: 100%;
+    height: 100px;
+    padding-top: 34px;
+    background-color: gray;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.logo {
+    font: var(--fonte-padrao);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--azul);
+}
+
+.logo:hover {
+    color: var(--azul-escuro);
+    transition: 0.3s;
+}
+
+.links {
+    display: flex;
+    font: var(--fonte-padrao);
+    font-size: 18px;
+    font-weight: 400;
+    width: 310px;
+    height: 40px;
+    gap: 60px;
+}
+
+.nav-link:hover {
+    font: var(--fonte-padrao);
+    text-decoration: underline;
+    color: var(--azul-escuro);
+    transition: 0.4s;
+}
+
+.pesquisa-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imput-group {
+    background-color: rgba(255, 255, 255, 0.452);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px 8px 8px 16px;
+    width: 210px;
+    height: 40px;
+    gap: 8px;
+}
+
+.imput-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: var(--azul);
+    color: var(--dark);
+}
+
+.imput-field {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.imput-field:focus {
+    outline: none;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 550px;
+}
+

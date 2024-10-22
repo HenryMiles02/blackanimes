@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
-@import url(nav-bar.css);
+@import url(header.css);
 
 
 * {
@@ -27,13 +27,9 @@
 
 body {
     /*background-color: var(--dark);*/
-    color: var(--branco); 
+    font: var(--fonte-padrao);
     width: 100vw;
     height: 100vh;
-}
-
-span {
-    color: var(--azul);
 }
 
 a {
