@@ -8,7 +8,7 @@ header {
     width: 100%;
     height: 100px;
     padding-top: 34px;
-    background-color: gray;
+    background-color: transparent;
     display: flex;
     align-items: baseline;
     justify-content: space-around;
@@ -75,21 +75,29 @@ header {
 .imput-field {
     width: 100%;
     border: none;
-    background-color: transparent;
+    color: black;
+    background-color:transparent;
+}
+
+.imput-field::placeholder {
+    color: black;
 }
 
 .imput-field:focus {
     outline: none;
 }
 
-.carousel-inner {
+.carrossel {
     display: flex;
     width: 100%;
-    height: 100%;
+    position: absolute;
+    z-index: -1;
+
 }
 
-.carousel-item img {
+.bg-carrosel {
     width: 100%;
     height: 550px;
+    position: absolute;
+    z-index: -1;
 }
-
