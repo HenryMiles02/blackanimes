@@ -101,3 +101,33 @@ header {
     position: absolute;
     z-index: -1;
 }
+
+.slide-card {
+    background-color: #15131f9a;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    height: 400px;
+    padding: 20px 30px;
+    column-gap: auto;
+}
+
+.slide-card h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--azul);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.slide-card .temp-class {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 30px;
+}
