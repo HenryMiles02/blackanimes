@@ -2,6 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 90vw;
+    height: 90vh;
 }
 
 .navigation {
@@ -46,6 +47,7 @@ header {
 .nav-link:hover {
     transform: scale(1.1);
     text-decoration: underline;
+    color: var(--azul);
 }
 
 .pesquisa-login {
@@ -109,35 +111,39 @@ header {
 
 .bg-carrosel {
     width: 100%;
-    height: 95vh;
+    height: 90vh;
     min-height: 450px;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: -1;
     object-fit: cover;
 }
 
 .slide-card {
-    background-color: #15131fc4;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 40%, transparent);
     color: var(--branco);
     display: flex;
+    position: absolute;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
     padding: 40px;
+    padding-left: 80px;
+    top: 0;
     width: 480px;
-    height: 95vh;
+    height: 90vh;
     gap: 15px;
-    backdrop-filter:blur(4px);
 }
 
 .descricao h1 {
     display: flex;
     justify-content: center;
     align-items: end;
+    text-align: center;
     color: var(--branco);
     font-size: 24px;
     font-weight: 600;
     height: 40px;
+    width: 300px;
 }
 
 .descricao .temp-class {
@@ -221,6 +227,7 @@ header {
     font-size: 35px;
     top: 50%;
     transition: 0.3s;
+    z-index: 5;
 }
 
 .btn-slide:hover {
@@ -234,7 +241,7 @@ header {
 }
 
 .btn-slide:last-child {
-    right: 4px;
+    right: 5px;
 }
 
 .hiden{
