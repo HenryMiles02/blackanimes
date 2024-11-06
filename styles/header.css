@@ -170,6 +170,7 @@ header {
     -webkit-box-orient: vertical; 
     text-overflow: ellipsis;
     font-size: 15px;
+    font-family: var(--fonte-texto);
 }
 
 .card-buttons button {
@@ -234,6 +235,11 @@ header {
     background-color: #00258a;
     color: rgb(214, 214, 214);
     transform: scale(1.2);
+}
+
+.btn-slide img {
+    width: 40px;
+    height: 40px;
 }
 
 .btn-slide:first-child {

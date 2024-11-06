@@ -2,7 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teko:wght@300..700&display=swap');
+
 @import url(header.css);
+
+@import url(main.css);
 
 :root {
     --branco:#ffffff;
@@ -13,10 +17,12 @@
     --preto:#000000; 
 
     --fonte-padrao: "Teko", sans-serif;
+    --fonte-texto: "Noto Sans", sans-serif;
 }
 
 body {
-    /*background-color: var(--dark);*/
+    background: linear-gradient(150deg, black 40%, #28272b);
+    color: var(--branco);
     font: var(--fonte-padrao);
     margin: 0;
     padding: 0;
@@ -29,4 +35,5 @@ body {
 a {
     text-decoration: none;
     list-style: none;
+    color: var(--branco);
 }
