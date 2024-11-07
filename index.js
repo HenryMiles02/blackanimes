@@ -46,7 +46,7 @@ var card2 = `
                             <p>3 Temporadas</p>
                         </div>
                     </div>
-                    <p>
+                    <p class="text">
                         Tanjiro Kamado é um jovem que busca vingar sua família, assassinada por demônios, e salvar sua irmã Nezuko, que foi transformada em um deles. Ele se junta aos Caçadores de Demônios para lutar contra essas criaturas e poder salvar sua irmã.
                     </p>
                     <div class="card-buttons">
@@ -72,7 +72,7 @@ var card3 = `
                             <p>11 Temporadas</p>
                         </div>
                     </div>
-                    <p>
+                    <p class="text">
                         One Piece é um anime que segue as aventuras de Monkey D. Luffy, um jovem pirata que sonha em se tornar o Rei dos Piratas. Com a habilidade de esticar seu corpo como borracha, Luffy forma a tripulação dos Chapéus de Palha e embarca em uma jornada pela Grand Line em busca do lendário tesouro "One Piece".
                     </p>
                     <div class="card-buttons">
@@ -98,7 +98,7 @@ var card4 = `
                             <p>3 Temporadas</p>
                         </div>
                     </div>
-                    <p>
+                    <p class="text">
                         Satoru Mikami, um homem comum que, após ser morto, reencarna em um mundo de fantasia como um slime. Com habilidades únicas, ele ganha o nome de Rimuru Tempest e começa a construir um novo lar para monstros, buscando a paz e a prosperidade. Rimuru forma alianças com diversas espécies e enfrenta poderosos inimigos, fazendo novas amizades, obtendo poder e sempre vivendo uma aventura.
                     </p>
                     <div class="card-buttons">
@@ -154,3 +154,33 @@ function beforeButton() {
     }
     carrossel.innerHTML = lista[indice];
 }
+
+const swiper = new Swiper('.card-wrapper', {
+    loop: true,
+    spaceBetween: 20,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+       0: {
+        slidesPerView: 1
+       },
+       760: {
+        slidesPerView: 2
+       },
+       1024: {
+        slidesPerView: 6
+       },
+    }
+  });
