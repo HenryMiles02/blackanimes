@@ -40,14 +40,15 @@ header {
 .nav-link {
     font: var(--fonte-padrao);
     color: var(--branco);
-    font-weight: 500;
-    transition: 0.4s;
+    font-weight: 400;
+    letter-spacing: 3px;
+    transition: 0.2s;
 }
 
 .nav-link:hover {
     transform: scale(1.1);
     text-decoration: underline;
-    color: var(--azul);
+    color: aqua;
 }
 
 .pesquisa-login {
@@ -85,6 +86,7 @@ header {
     width: 100%;
     border: none;
     color: var(--branco);
+    letter-spacing: 4px;
     background-color:transparent;
 }
 
@@ -181,7 +183,8 @@ header {
     color: var(--branco);
     border-radius: 10px;
     text-align: center;
-    font-size: 16px;
+    letter-spacing: 4px;
+    font-size: 24px;
     font-weight: 400;
     transition: 0.3s;
 }
