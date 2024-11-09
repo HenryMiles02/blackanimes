@@ -1,6 +1,8 @@
+//carrossel grande
+
 const carrossel = document.getElementById("carrossel1")
 
-var card1 = `           
+var card1 = `
 <div class="container-carrossel" id="img1">
     <div class="slide">
         <button class="btn-slide" onclick="beforeButton()"> &lt; </button>
@@ -155,6 +157,8 @@ function beforeButton() {
     carrossel.innerHTML = lista[indice];
 }
 
+    //carrossel pequeno
+
 const swiper = new Swiper('.card-wrapper', {
     loop: true,
     spaceBetween: 20,
@@ -184,3 +188,49 @@ const swiper = new Swiper('.card-wrapper', {
        },
     }
   });
+
+  //timer epsodios
+
+  
+  const minutos = document.getElementById("relogio");
+  
+  const relogio = setInterval(function time() {
+    var dataDePostagem = new Date('2024-11-05T17:49:00')
+
+    let dateToday = new Date();
+
+    const diferenca = dateToday - dataDePostagem; 
+
+    const s = Math.floor(diferenca / 1000);
+    const min = Math.floor(s / 60);
+    const hr = Math.floor(min / 60);
+    const days = Math.floor(hr / 24);
+    const months = Math.floor(days / 30); // Considera um mês como 30 dias
+    const years = Math.floor(months / 12);
+
+    if(min <= 1){
+        minutos.innerHTML = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${min} </span>
+        <p>minuto</p>`
+    }
+    if(min >= 2){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${min} </span>`
+    }
+    if(min > 59){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${hr} </span>`
+    }
+    if (hr >= 2){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${hr} </span> horas`
+    }
+    if (hr > 23){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${days} </span> dia`
+    }
+    if (days >= 2){
+        minutos.innerHTML = `<span style="color: aqua;" class="" id="number"> ${days} </span> dias`
+    }
+    if (days > 30){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${months} </span>  mês`
+    }
+    if (months >= 2){
+        minutos.textContent = `<span style="color: aqua; font-size:24px;" class="" id="number"> ${months} </span>  meses`
+    }
+  }, 1000)

@@ -154,3 +154,13 @@ main {
     font-size: 16px;
     font-weight: 300;
 }
+
+.container-ep .card-ep .info-card span {
+    font-family: var(--font-texto);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container-ep .card-ep .info-card .number {
+    font-size: 24px;
+}
