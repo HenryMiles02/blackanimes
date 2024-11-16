@@ -27,7 +27,7 @@ var card1 = `
         </p>
         <div class="card-buttons">
             <button>Assitir agora</button>
-            <a href="#" class="favorite"></a>
+                        <!--<a href="#" class="favorite"></a>   botão de favoritos -->
         </div>
     </div>
 </div> 
@@ -53,7 +53,7 @@ var card2 = `
                     </p>
                     <div class="card-buttons">
                         <button>Assitir agora</button>
-                        <a href="#" class="favorite"></a>
+                        <!--<a href="#" class="favorite"></a>   botão de favoritos -->
                     </div>
                 </div>
             </div>
@@ -78,8 +78,8 @@ var card3 = `
                         One Piece é um anime que segue as aventuras de Monkey D. Luffy, um jovem pirata que sonha em se tornar o Rei dos Piratas. Com a habilidade de esticar seu corpo como borracha, Luffy forma a tripulação dos Chapéus de Palha e embarca em uma jornada pela Grand Line em busca do lendário tesouro "One Piece".
                     </p>
                     <div class="card-buttons">
-                        <button>Assitir agora</button>
-                        <a href="#" class="favorite"></a>
+                        <button><a href="#">Assitir agora</a></button>
+                        <!--<a href="#" class="favorite"></a>   botão de favoritos -->
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ var card4 = `
                     </p>
                     <div class="card-buttons">
                         <button>Assitir agora</button>
-                        <a href="#" class="favorite"></a>
+                        <!--<a href="#" class="favorite"></a>   botão de favoritos -->
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@ var card5 = `
                     </p>
                     <div class="card-buttons">
                         <button>Assitir agora</button>
-                        <a href="#" class="favorite"></a>
+                        <!--<a href="#" class="favorite"></a>   botão de favoritos -->
                     </div>
                 </div>
             </div>
