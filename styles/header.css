@@ -112,9 +112,8 @@ header {
 }
 
 .bg-carrosel {
-    width: 100%;
+    width: 98.7vw;
     height: 90vh;
-    min-height: 450px;
     position: absolute;
     top: 0;
     z-index: -1;

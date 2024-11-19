@@ -45,7 +45,7 @@ header {
 
 .navigation {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.60), var(--azul-escuro));
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -141,47 +141,28 @@ header {
 
 /*video player*/
 
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
 .player {
+    background-color: white;
     width: 70vw;
     max-width: 70vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
 .video-container {
-    height: 521px; 
-    width: 99%;
+    width: 68vw;
     overflow: hidden;
-    max-width: 99%;
+    max-width: 100%;
     border-radius: 5px;
-}
-
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 0;
-}
-
-.descricao {
-    background-color: var(--dark);
-    font-family: var(--fonte-texto);
-    width: 60vw;
-    max-width: 60vw; /* Limita a largura da descrição */
-    border: var(--azul-escuro) 1px solid;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
-.descricao li {
-    width: 100%;
-    margin: 5px 0;
-}
-
-.descricao span {
-    color: var(--azul);
-    margin-right: 5px;
+    padding-top: 8px;
 }
 
 /*footer*/
