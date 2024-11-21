@@ -22,6 +22,8 @@ body {
     background: linear-gradient(150deg, black 40%, #28272b);
     color: var(--branco);
     font: var(--fonte-padrao);
+    width: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -148,21 +150,69 @@ main {
 }
 
 .player {
-    background-color: white;
-    width: 70vw;
-    max-width: 70vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    width: 60vw;
+
 }
 
 .video-container {
-    width: 68vw;
-    overflow: hidden;
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.video-player {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.video {
+    width: 742px;
     border-radius: 5px;
-    padding-top: 8px;
+    margin: 0;
+}
+
+.before-after {
+    display: flex;
+    justify-content: space-between;
+}
+
+.before-after button {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-size: 24px;
+    border-radius: 5px;
+    border: #09080e 1px solid;
+    box-shadow: #000000 2px 2px 6px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+}
+
+.descricao {
+    background-color: var(--dark);
+    width: 80%;
+    font-family: var(--fonte-texto);
+    font-weight: 300;
+    padding: 0px 30px 0px 0px;
+    border-radius: 8px;
+    border: var(--azul-escuro) 1px solid;
+}
+
+.descricao span {
+    color: var(--azul);
+    font-weight: 800;
+}
+
+/*lista de animes*/
+
+.thumb-ep img{
+    width: 100px;
 }
 
 /*footer*/
