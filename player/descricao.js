@@ -1,6 +1,3 @@
-
-
-
 const fetchApi = async (id) => {
   const result = await fetch(`https://api.jikan.moe/v4/anime/${id}`)
   .then((res) => res.json())
