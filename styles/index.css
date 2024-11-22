@@ -30,6 +30,8 @@ body {
     font-family: var(--fonte-padrao);
     list-style: none;
     text-decoration: none;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
