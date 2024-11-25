@@ -25,7 +25,6 @@ body {
     font: var(--fonte-padrao);
     width: 100vw;
     overflow-x: hidden;
-    align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,6 +47,7 @@ header {
     background-image: linear-gradient(180deg, #000000, #0b071e);
     height: 10vh;
     width: 100vw;
+    overflow: hidden;
     /*margin-inline: auto;*/
    
 
@@ -74,7 +74,7 @@ header {
 }
 
 .nav-list li {
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-left: 32px;
 }
 
@@ -132,62 +132,54 @@ header {
 }*/
 
 .search-login {
-    width: 20vw;
-    border-radius: 25px;
 
 }
 
-.search-login .imput-group {
-    position: relative;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    padding: 8px 8px 8px 20px;
-    gap: 8px;
-    backdrop-filter: blur(4px);
-    border: 1px solid #ffffff3a;
-}
-
-.imput-group imput {
+.imput-group {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 18px;
-}
-
-.imput-group .imput-icon {
+    top: 1%;
+    right: 8%;
+    background: var(--azul);
+    backdrop-filter: blur(4px);
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ffffff3a;
+    border-radius: 50px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    min-width: 32px;
-    min-height: 32px;
-    background-color: var(--azul);
-    color: var(--dark);
 }
 
-.imput-field {
-    width: 100%;
+.search-text {
     border: none;
-    color: var(--branco);
-    letter-spacing: 4px;
-    background-color:transparent;
-}
-
-.imput-field::placeholder {
-    color: var(--branco);
-}
-
-.imput-field:focus {
+    background: none;
     outline: none;
+    padding: 0;
+    color: var(--branco);
+    font-size: 20px;
+    line-height: 40px;
+    width: 0;
+    transition: .2s;
 }
 
-.dropdown-toggle::after {
-    color: #fff !important;
+.search-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--azul);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imput-group:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.imput-group:hover>.search-text{
+    width: 15vw;
 }
 
 /*video player*/
@@ -198,6 +190,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100vw;
+    padding-top: 10px;
     margin: 0;
     gap: 30px;
 }
@@ -205,7 +198,6 @@ main {
 .player {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 10px;
     width: 55vw;
@@ -221,6 +213,7 @@ main {
 .video-player {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     flex-direction: column;
     background-color: var(--dark);
     width: 100%;
@@ -347,8 +340,6 @@ footer p {
 
 @media (max-width:450px) {
     .navigation{
-        justify-content: space-between;
-        padding-inline: 16px;
     }
 }
 
@@ -432,8 +423,13 @@ footer p {
         display: block !important;
     }
     
-    .search-login {
-        width: 45vw;
+    .imput-group {
+        top: 1.5%;
+        right: 28%;
+    }
+
+    .imput-group:hover>.search-text{
+        width: 25vw;
     }
 }
 
