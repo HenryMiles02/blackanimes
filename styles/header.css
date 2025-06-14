@@ -12,9 +12,6 @@ header {
     position: absolute;
     z-index: 1;
     overflow: hidden;
-    /*margin-inline: auto;*/
-   
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -66,16 +63,6 @@ header {
     cursor: pointer;
 }
 
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
-
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -84,24 +71,13 @@ header {
     transition: 0.3s;
 }
 
-
-/* --login-- 
-
-
-.pesquisa-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}*/
-
-.search-login {
-
-}
+.mobile-menu.active .line1 { transform: rotate(-45deg) translate(-8px, 8px); }
+.mobile-menu.active .line2 { opacity: 0; }
+.mobile-menu.active .line3 { transform: rotate(45deg) translate(-5px, -7px); }
 
 .imput-group {
     position: absolute;
-    top: 12%;
+    top: 25.7%;
     right: 6%;
     background: var(--azul);
     backdrop-filter: blur(4px);
@@ -155,7 +131,7 @@ header {
 }
 
 .bg-carrosel {
-    width: 98.7vw;
+    width: 100vw;
     height: 90vh;
     position: absolute;
     top: 0;
@@ -301,6 +277,7 @@ header {
 
 @media (max-width:450px) {
     .navigation{
+        flex-direction: column;
     }
 }
 
@@ -356,19 +333,23 @@ header {
 }
 
 @media (max-width: 999px) {
+
+    header {
+        height: 10vh;
+    }
+
     .navigation {
         width: 100vw;
     }
 
     .nav-list {
         position: absolute;
-        top: 9.9vh;
+        top: 10vh;
         right: 0;
         width: 50vw;
         height: 92vh;
         background: #09061b ;
         flex-direction: column;
-        align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
@@ -377,7 +358,6 @@ header {
 
     .nav-list li {
         margin-left: 0;
-        opacity: 0;
     }
 
     .mobile-menu {
@@ -391,6 +371,10 @@ header {
 
     .imput-group:hover>.search-text{
         width: 25vw;
+    }
+
+    .carrossel {
+        display: none;
     }
 }
 

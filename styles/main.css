@@ -13,9 +13,8 @@ main {
     font-family: var(--font-texto);
     display: flex;
     align-items: center;
-    justify-content: center;
     min-width: 98vw;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px;
 }
 
 .card-wrapper {
@@ -27,22 +26,25 @@ main {
 
 .card-list .card-item {
     list-style-type: none;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #111;
 }
 
-.card-list .card-item .card-link {
-    user-select: none;
+.card-link {
     display: block;
     border-radius: 12px;
     text-decoration: none;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 }
 
-.card-list .card-item .card-link:active {
+.card-link:active {
     cursor: grabbing;
 }
 
-.card-list .card-item .card-link:hover {
-    transform: scale(1.1);
+.card-link:hover {
+    transform: scale(1.05);
 }
 
 .card-list .card-link .card-image {
@@ -50,7 +52,7 @@ main {
     aspect-ratio: 6 / 8;
     object-fit: cover;
     border: 2px solid #003372;
-    border-radius:8px;
+    border-radius:12px;
     box-shadow: 0 5px 15px black;
 }
 
@@ -66,12 +68,13 @@ main {
     letter-spacing: 4px;
     color: transparent;
     font-weight: 400;
-    transition: 0.2s;
+    transition: 0.3s;
     position: absolute;
 }
 .card-title:hover {
+    width: 100%;
     background-color: #131313c4;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     color: aqua;
 }
 .card-wrapper .swiper-pagination-bullet {
@@ -101,36 +104,47 @@ main {
 }
 
 .container-ep {
-    display: grid;
-    grid-template-columns: repeat(5, 255px);
-    row-gap: 20px;
-    margin: 10px 0px 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 0.625rem 0;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 1rem;
 }
 
 .container-ep .card-ep {
-    width: 242px;
-    height: 165px;
-    gap: 5px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 2px 3px 10px black;
+  width: 100%;
+  aspect-ratio: 15/10;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 2px 3px 10px black;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .container-ep .card-ep .ep-image {
     width: 100%;
+    height: auto;
     border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    display: block;
+    transition: filter 0.3s ease;
 }
 
 .card-ep .title-card {
-    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 83%;
+    height: 100%;
     margin: 0;
+    display: flex;
     align-items: start;
     justify-content: center;
-    top: 0;
-    position: absolute;
-    font-weight: 24px;
+    font-size: 1.25rem;
     letter-spacing: 4px;
     color: transparent;
     transition: 0.3s;
@@ -144,23 +158,18 @@ main {
 }
 
 .container-ep .card-ep .info-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;
-}
-
-.container-ep .card-ep .info-card p {
-    font-family: var(--font-texto);
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.container-ep .card-ep .info-card span {
-    font-family: var(--font-texto);
-    font-size: 16px;
-    font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.313rem 0.625rem;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .container-ep .card-ep .info-card .number {
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px;) {
+    
 }
