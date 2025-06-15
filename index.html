@@ -22,12 +22,21 @@
             
             <a href="/" class="logo">BlackAnimes</a>
 
+            
             <ul class="nav-list">
+                <li class="mobile-search">
+                    <div class="search-container-mobile">
+                        <input type="text" class="search-input-mobile" placeholder="Buscar animes...">
+                        <button class="search-button-mobile">
+                            <img src="../img/icons/search.svg" alt="Buscar" />
+                        </button>
+                    </div>
+                </li>
                 <li><a href="#">Animes</a></li>
                 <li><a href="#">Gêneros</a></li>
                 <li><a href="#">Filmes</a></li>
             </ul>
-
+            
             <div class="search-login">
                 <div class="imput-group">
                     <input type="text" class="search-text" placeholder="Pesquisar">
@@ -35,8 +44,9 @@
                         <img src="../img/icons/search.svg" alt="Lupa" height="20" width="20" >
                     </a>
                 </div>
-
+                
             </div>
+
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -413,6 +423,9 @@
 
     <script src="index.js"></script>
     <script src="player/descricao.js"></script>
+    <script src="mobile-navbar.js"></script>
+
+    <div class="menu-overlay"></div>
 </body>
 
 </html>

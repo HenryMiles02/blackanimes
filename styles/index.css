@@ -30,7 +30,7 @@ body {
     font-family: var(--fonte-padrao);
     list-style: none;
     text-decoration: none;
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -45,8 +45,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(0deg, #060213e7 50%, #1e1347);
-    height: 50px;
+    background-image: linear-gradient(0deg, #060213e7 10%, #29282c);
+    height: 110px;
 }
 
 footer p {
