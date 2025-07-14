@@ -1,0 +1,253 @@
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0; /* Ele vai ficar atrás do menu */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+body.menu-open .menu-overlay {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 0; /* Atrás da nav-list mas na frente do resto do site */
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+}
+
+.carrossel {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    height: 95vh;
+    min-height: 450px;
+    align-items: center;
+}
+
+.bg-carrosel {
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.slide-card {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 40%, transparent);
+    color: var(--branco);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    padding-left: 80px;
+    top: 0;
+    width: 480px;
+    height: 90vh;
+    gap: 15px;
+}
+
+.descricao h1 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: 400;
+    height: 40px;
+    width: 300px;
+}
+
+.descricao .temp-class {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 30px;
+    height: 30px;
+}
+.temp-class img {
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+}
+
+.text {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    -webkit-box-orient: vertical; 
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-family: var(--fonte-texto);
+}
+
+.card-buttons button {
+    border: none;
+    width: 200px;
+    height: 40px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    gap:10px;
+}
+
+.card-buttons button:hover {
+    background-color: var(--azul-escuro);
+    box-shadow: 5px 3px 8px;
+    transform: scale(1.02);
+}
+
+.card-buttons .favorite{
+    background-image: url(../img/icons/marcador.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    transition: 0.5s;
+}
+
+.card-buttons .favorite:hover {
+    background-image: url(../img/icons/seg-marcador.svg);
+    transform: scale(1.2);
+}
+
+.btn-slide {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 55px;
+    height: 53px;
+    background-color: #005ED1;
+    opacity: 0.6;
+    color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 100px;
+    font-size: 40px;
+    top: 40%;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.btn-slide:hover {
+    background-color: #00258a;
+    color: rgb(214, 214, 214);
+    transform: scale(1.2);
+}
+
+.btn-slide img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-slide:first-child {
+    left: 5px;
+}
+
+.btn-slide:last-child {
+    right: 5px;
+}
+
+.hiden{
+    display: none;
+}
+
+@media (max-width:450px) {
+
+}
+
+@media (max-width:750px) {
+
+    body {
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .navigation {
+        width: 100vw;
+    }
+    
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    .player{
+        justify-content: center;
+        width: 100vw;
+        padding: 10px 0 0 0;
+    }
+
+    .video-container {
+        width: 95vw;
+    }
+
+    .video-player {
+        width:100%;
+    }
+
+    .video {
+        width: 95vw;
+    }
+
+    .descricao {
+        width: 70vw;
+        font-size: 20px;
+    }
+
+    .video-list {
+        width: 70vw;
+        align-self: center;
+    }
+
+    .video-list .title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 999px) {
+
+    header {
+        height: 10vh;
+    }
+
+    .carrossel {
+        display: none;
+    }
+}
+
+@media (max-width:1200px) {
+
+    main {
+        gap: 5px;
+    }
+}
