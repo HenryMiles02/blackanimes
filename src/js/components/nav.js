@@ -1,13 +1,22 @@
 const searchBtn = document.querySelector(".search-btn");
 const input = document.querySelector(".search-container");
 const closeBtn = document.querySelector(".close-btn");
+const logo = document.querySelector(".logo");
 
 searchBtn.addEventListener('click', () => {
     input.classList.add('active')
+
+    if(window.innerWidth <= 550) {
+        logo.classList.add('hidden')
+    }
 })
 
 closeBtn.addEventListener('click', () => {
     input.classList.remove('active')
+
+    if(window.innerWidth <= 550) {
+        logo.classList.remove('hidden')
+    }
 })
 
 class MobileNavbar {
