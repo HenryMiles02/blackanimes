@@ -43,32 +43,51 @@ const cards= [
 let indice = 0;
 
 function renderCard(index) {
-    const {title, img, age_rating, seasons, description} = cards[index];
+  const {title, img, age_rating, seasons, description} = cards[index];
 
-    carrossel.innerHTML = `
-      <div class="container-carrossel">
-        <div class="slide">
-          <button class="btn-slide" onclick="beforeButton()"> &lt; </button>
-          <img src="${img}" alt="" class="bg-carrosel">
-          <button class="btn-slide" onclick="nextButton()"> &gt; </button>
-        </div>
-        <div class="slide-card">
-            <div class="info">
-                <div class="descricao">
-                    <h1>${title}</h1>
-                    <div class="temp-class">
-                        <img src="img/icons/${age_rating}.jpg" alt="">
-                        <p>${seasons} Temporada</p>
-                    </div>
-                </div>
-                    <p class="text">${description}</p>
-                <div class="card-buttons">
-                    <button>Assistir agora</button>
-                </div>
-            </div>
-        </div>
-      </div>`;
+  let prevImg = document.querySelector('.bg-slider')
+  if(prevImg) prevImg.classList.remove('show');
+
+  let prevCard = document.querySelector('.slide-card')
+  if(prevCard) prevCard.classList.remove('show')
+
+  carrossel.innerHTML = `
+    <div class="container-carrossel">
+      <div class="slide">
+        <button class="btn-slide" onclick="beforeButton()"> &lt; </button>
+        <img src="${img}" alt="" class="bg-slider">
+        <button class="btn-slide" onclick="nextButton()"> &gt; </button>
+      </div>
+      <div class="slide-card">
+          <div class="info">
+              <div class="descricao">
+                  <h1>${title}</h1>
+                  <div class="temp-class">
+                      <img src="img/icons/${age_rating}.jpg" alt="">
+                      <p>${seasons} Temporada</p>
+                  </div>
+              </div>
+                  <p class="text">${description}</p>
+              <div class="card-buttons">
+                  <button>Assistir agora</button>
+              </div>
+          </div>
+      </div>
+    </div>`;
+
+  setTimeout(() => {
+    let imgElement = document.querySelector('.bg-slider')
+    if(imgElement) {
+      imgElement.classList.add('show')
+    }
+
+    let cardElement = document.querySelector('.slide-card')
+    if(cardElement) {
+      cardElement.classList.add('show')
+    }
+  }, 5);
 }
+
 
 window.nextButton = function () {
     indice = (indice + 1) % cards.length;
@@ -81,3 +100,98 @@ window.nextButton = function () {
 }
 
 renderCard(indice);
+
+let autoSlide;
+
+function startAutoSlide() {
+  autoSlide = setInterval(() => {
+    nextButton();
+  }, 10000)
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+carrossel.addEventListener("mouseenter", stopAutoSlide);
+carrossel.addEventListener("mouseleave", startAutoSlide);
+
+startAutoSlide()
+
+
+    //carrossel pequeno
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  preloadImages: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  lazyPreloadPrevNext: 2,
+  lazy: {
+    loadPrevNext: true,
+  },
+
+  grabCursor: true,
+  speed: 500,
+
+  breakpoints: {
+  640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 55,
+    }
+  }
+});
+
+
+  //timer epsodios
+
+  
+  const minutos = document.getElementById("relogio");
+  var dataDePostagem = new Date('2024-11-05T17:49:00')
+  
+  setInterval(() => {
+
+    const dateToday = new Date();
+    const diferenca = dateToday - dataDePostagem; 
+
+
+    const s = Math.floor(diferenca / 1000);
+    const min = Math.floor(s / 60);
+    const hr = Math.floor(min / 60);
+    const days = Math.floor(hr / 24);
+    const months = Math.floor(days / 30); // Considera um mês como 30 dias
+    const years = Math.floor(months / 12);
+
+  let texto = "";
+
+  if (min < 1) {
+    texto = `agora`;
+  } else if (min < 60) {
+    texto = `${min} minuto${min > 1 ? "s" : ""}`;
+  } else if (hr < 24) {
+    texto = `${hr} hora${hr > 1 ? "s" : ""}`;
+  } else if (days < 30) {
+    texto = `${days} dia${days > 1 ? "s" : ""}`;
+  } else if (months < 12) {
+    texto = `${months} mês${months > 1 ? "es" : ""}`;
+  } else {
+    texto = `${years} ano${years > 1 ? "s" : ""}`;
+  }
+
+  minutos.innerHTML = `<span id="number">${texto}</span>`;
+}, 1000);

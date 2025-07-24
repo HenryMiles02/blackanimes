@@ -8,9 +8,8 @@
     justify-content: space-around;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 500;
+.logo img {
+    height: 60px;
 }
 
 .logo.hidden {
@@ -22,14 +21,14 @@
     text-shadow: 0 0 8px var(--azul-claro);
 }
 
-a {
+.navigation a {
     font-size: 1rem;
     color: var(--azul-claro);
     letter-spacing: 3px;
     transition: .3s ease;
 }
 
-a:hover {
+.navigation a:hover {
     color: var(--branco);
     text-shadow: 0 0 5px var(--azul-claro);
 }

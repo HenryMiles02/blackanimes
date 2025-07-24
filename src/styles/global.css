@@ -3,6 +3,7 @@
 @import url(reset.css);
 @import url(main.css);
 @import url(./components/nav.css);
+@import url(./components/footer.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
@@ -12,21 +13,16 @@
 :root {
     --branco:#ffffff;
     --cinza-claro:   #AAB0C0;   /*para textos secundários*/
-    --dark:#15131F;
-    --preto:#000000; 
+    --dark:          #15131F;    /*ideal como fundo geral*/ 
+    --preto:         #000000;    /*para contrastes fortes*/
     --azul: #0066FF;    /*azul mais limpo e moderno*/ 
     --azul-claro: #00AEEF;    /*azul neon mais vibrante, traz tecnologia e energia */
     --azul-medio: #1E2A78; /*novo tom intermediário para transições suaves*/
-    --azul-escuro: #0B0037;
+    --azul-escuro:   #0B0037;    /*mantém seu azul profundo, bom para fundos*/ 
 
     --fonte-padrao: "Teko", sans-serif;
     --fonte-texto: "Noto Sans", sans-serif;
 }
-/* --branco:        #ffffff;
---azul-escuro:   #0B0037;    mantém seu azul profundo, bom para fundos 
---dark:          #15131F;    ideal como fundo geral 
---preto:         #000000;    para contrastes fortes 
-*/
 
 body {
     background-color: var(--dark);
