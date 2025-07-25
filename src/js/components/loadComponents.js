@@ -19,5 +19,5 @@ async function loadComponent(id, path, scriptPath = null) {
 
 // Carregar nav + script
 
-loadComponent("nav", "src/components/nav.html", "src/js/components/nav.js");
-loadComponent("footer", "src/components/footer.html", "");
+loadComponent("nav", "../components/nav.html", "../js/components/nav.js");
+loadComponent("footer", "../components/footer.html", "");

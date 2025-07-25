@@ -1,0 +1,77 @@
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--branco);
+    width: 100vw;
+    padding: 10px 0;
+}
+
+.player-container {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.player-container .video-container  video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.player-container .player-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+}
+
+.player-control i {
+    color: var(--branco);
+}
+
+
+.player-control .pre-btn, .player-control .list-episodes, .player-control .next-btn {
+    background-color: var(--azul-escuro);
+    width: 20vw;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 5px;
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.player-control .pre-btn:hover, .player-control .list-episodes:hover, .player-control .next-btn:hover {
+    border-color: var(--branco);
+    box-shadow: 2px 2px 8px var(--azul-claro);
+    transform: scale(1.03);
+}
+
+.player-container .description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    letter-spacing: 2px;
+}
+
+.player-container .description span {
+    color: var(--azul-claro);
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.player-container .description p {
+    width: calc(70vw - 100px);
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.card img {
+    width: 150px;
+}

@@ -132,6 +132,10 @@
 }
 
 @media (max-width: 999px) {
+    .navigation {
+        justify-content: space-between;
+    }
+
     .nav-list {
         position: absolute;
         top: 7vh;

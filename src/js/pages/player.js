@@ -11,11 +11,9 @@ const fetchApi = async (id) => {
   function loadAnime(result){
     const animeDetails = document.getElementById('anime-details');
     animeDetails.innerHTML = ` 
-          <li>
-              <ul><span>Nome:</span> ${result.data.title}.</ul>
-              <ul><span>Episódio:</span> ${result.data.episodes}.</ul>
-              <ul><span>Sinopse:</span> ${result.data.synopsis}.</ul>
-          </li>
+              <p><span>Nome:</span> ${result.data.title}.</p>
+              <p><span>Episódio:</span> ${result.data.episodes}.</p>
+              <p><span>Sinopse:</span> ${result.data.synopsis}.</p>
         `;
 }
 
@@ -67,3 +65,21 @@ if (document.body.contains(document.getElementById('video'))) {
     })
     .catch(error => console.error('Error fetching anime data:', error));
 }*/
+
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.video-container video');
+let title = document.querySelector('.video-container .title');
+
+listVideo.forEach(video =>{
+    video.onclick = () =>{
+        listVideo.forEach(vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        if(video.classList.contains('active')){
+            let src = video.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+        };
+    };
+});
